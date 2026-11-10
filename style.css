@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+    background: linear-gradient(90deg, #654ea3, #eaafc8);
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.12);
+    padding: 25px 10px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.stat-card h2 {
+    color: #ffd369;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.form-box, .reports {
+    background: rgba(255,255,255,0.10);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffd369;
+}
+
+label {
+    display: block;
+    margin: 12px 0 7px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(90deg, #654ea3, #a66cff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 5px 3px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #eaafc8;
+    color: #222;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.report-card {
+    background: rgba(255,255,255,0.12);
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-left: 5px solid #ffd369;
+    overflow-wrap: anywhere;
+}
+
+.report-card h3 {
+    color: #ffd369;
+    margin-bottom: 10px;
+}
+
+.report-card p {
+    margin: 7px 0;
+}
+
+.open {
+    color: #70e1a1;
+    font-weight: bold;
+}
+
+.resolved {
+    color: #ffd369;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+@media(max-width: 650px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}

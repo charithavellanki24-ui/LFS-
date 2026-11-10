@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔍 Lost & Found System</h1>
+    <p>Find Lost Items • Report Found Items</p>
+</header>
+
+<div class="container">
+
+    <div class="stats">
+        <div class="stat-card"><h2 id="total">0</h2>Total Reports</div>
+        <div class="stat-card"><h2 id="lost">0</h2>Lost Items</div>
+        <div class="stat-card"><h2 id="found">0</h2>Found Items</div>
+        <div class="stat-card"><h2 id="resolved">0</h2>Resolved</div>
+    </div>
+
+    <section class="form-box">
+        <h2>Create New Report</h2>
+
+        <form id="reportForm">
+
+            <label>Lost or Found</label>
+            <select id="type" required>
+                <option value="">Select Type</option>
+                <option>Lost</option>
+                <option>Found</option>
+            </select>
+
+            <label>Item Name</label>
+            <input id="item" required placeholder="Enter item name">
+
+            <label>Description</label>
+            <textarea id="description" required></textarea>
+
+            <label>Location</label>
+            <input id="location" required placeholder="Enter location">
+
+            <label>Date</label>
+            <input type="date" id="date" required>
+
+            <label>Phone or Email</label>
+            <input id="contact" required placeholder="Enter contact details">
+
+            <button type="submit">Create Report</button>
+        </form>
+    </section>
+
+    <section class="reports">
+        <h2>All Reports</h2>
+
+        <input id="search" placeholder="Search item name...">
+
+        <div class="filters">
+            <select id="filter">
+                <option value="All">All Reports</option>
+                <option value="Lost">Lost</option>
+                <option value="Found">Found</option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="All">All Status</option>
+                <option value="Open">Open</option>
+                <option value="Resolved">Resolved</option>
+            </select>
+        </div>
+
+        <div id="reportList"></div>
+    </section>
+</div>
+
+<footer>
+    <p>Lost & Found Management System | Mini Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
